@@ -21,6 +21,11 @@ require( [
 ], function( TugOfWarModel, TugOfWarView, MotionModel, MotionView, Image, Sim, SimLauncher, Strings, TugIcon, MotionIcon, FrictionIcon, AccelerationIcon ) {
   'use strict';
 
+  //Workaround for travoltage issue 30
+  var newChild = document.createElement( 'audio' );
+  newChild.style.display = 'none';
+  document.body.appendChild( newChild );
+
   var simOptions = {
     credits: 'PhET Development Team -\n' +
              'Lead Design: Noah Podolefsky\n' +
